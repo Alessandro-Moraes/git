@@ -68,10 +68,9 @@ footer {
 
 .section__tudo > h2 {
     font-size: 60px;
-    background: linear-gradient(to right, #5839ee, #38bfdd);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: -3px;
 }
 
 .section__tudo img {
@@ -102,7 +101,7 @@ footer {
 }
 
 .section__topicos {
-    width: 70%;
+    width: 100%;
     float: left;
 }
 
