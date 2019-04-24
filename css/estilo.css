@@ -271,3 +271,20 @@ footer {
 }
 
 /*PAGINAS - SEÇÃO TOPICOS/*/
+
+/* PAGINA INSTALAÇAO COD */
+
+.cod{
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #38bfdd;
+    font-family: monospace;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.ancora{
+    font-family: monospace;
+    font-size: 15px;
+    padding: 10px;
+}
