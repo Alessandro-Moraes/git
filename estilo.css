@@ -1,0 +1,273 @@
+@charset "utf-8";
+
+/*ESTILOS GERAIS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial, sans-serif;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+main {
+    max-width: 1100px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+footer {
+    max-width: 1100px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: right;
+    background-color: #f4f5f5;
+}
+
+@media screen and (max-width: 905px) {
+    footer {
+        text-align: center;
+    }
+
+}
+
+/*ESTILOS GERAIS/*/
+
+
+/*CABEÇALHO*/
+
+.header__principal img {
+    max-width: 100%;
+}
+
+.header__principal {
+    width: 100%;
+    background-image: linear-gradient(to right, #5839ee, #38bfdd);
+    text-align: center;
+}
+
+/*CABEÇALHO//*/
+
+
+/*SEÇÃO TUDO SOBRE GIT*/
+
+.section__tudo {
+    max-width: 1100px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section__tudo > h2 {
+    font-size: 60px;
+    background: linear-gradient(to right, #5839ee, #38bfdd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.section__tudo img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .section__tudo > h2 {
+        font-size: 30px;
+
+    }
+
+}
+
+@media screen and (max-width: 250px) {
+    .section__tudo > h2 {
+        font-size: 15px;
+
+    }
+}
+
+/*SEÇÃO TUDO SOBRE GIT/*/
+
+/*PAGE INDEX - SEÇÃO PRINCIPAIS TÓPICOS*/
+
+.section__topicos a {
+    text-decoration: none;
+}
+
+.section__topicos {
+    width: 70%;
+    float: left;
+}
+
+.article__box {
+    margin: 10px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.article__box:hover {
+    background-color: #fafafa;
+    border-radius: 4px;
+}
+
+.article__box > h2 {
+    color: #333;
+}
+
+.article__box > p {
+    color: #8a8a8a;
+}
+
+.left {
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+
+.section__topicos > h2 {
+    color: #595959;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.article__box img {
+    float: left;
+    padding-right: 15px;
+}
+
+@media screen and (max-width: 905px) {
+    .left {
+        float: none;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    .article__box img {
+        display: block;
+        max-width: 100%;
+        float: none;
+        margin: 0 auto;
+        padding-right: 0;
+        padding-bottom: 15px;
+    }
+}
+
+/*SEÇÃO PRINCIPAIS TÓPICOS*/
+
+
+/*BARRA LATERAL*/
+.aside__barra {
+    margin-top: 15px;
+    margin-left: 15px;
+    width: calc(30% - 15px);
+    float: right;
+    padding: 15px;
+    background-color: #f4f5f5;
+    border-radius: 5px;
+}
+
+
+.aside__barra li {
+    list-style-type: none;
+    color: #595959;
+}
+
+.aside__barra h2 {
+    text-align: center;
+    font-size: 17px;
+    color: #595959;
+    margin-bottom: 15px;
+}
+
+.aside__barra a {
+    text-decoration: none;
+    color: #595959;
+    display: inline-block;
+    padding: 5px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.aside__barra a:hover {
+    color: #5839ee;
+}
+
+@media screen and (max-width: 750px) {
+    .section__topicos {
+        width: 100%;
+        float: none;
+    }
+
+    .aside__barra {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        background-color: white;
+    }
+
+    .aside__barra h2 {
+        font-size: 20px;
+    }
+
+}
+
+/*BARRA LATERAL/*/
+
+/*PAGINAS - SEÇÃO TOPICOS*/
+.section__topicos_full {
+    float: left;
+    width: 70%;
+}
+
+.section__topicos_full > h2 {
+    color: #595959;
+    text-align: center;
+}
+
+.article__box-full {
+    padding: 15px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.article__box-full h2 {
+    color: #333;
+}
+
+.article__box-full p {
+    color: #595959;
+}
+
+@media screen and (max-width: 750px) {
+    .section__topicos_full {
+        float: none;
+        width: 100%;
+    }
+
+    .article__box-full {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .article__box img {
+        display: block;
+        max-width: 100%;
+        float: none;
+        margin: 0 auto;
+        padding-right: 0;
+        padding-bottom: 15px;
+    }
+
+
+}
+
+/*PAGINAS - SEÇÃO TOPICOS/*/
