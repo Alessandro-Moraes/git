@@ -274,7 +274,7 @@ footer {
 
 /* PAGINA INSTALAÇAO COD */
 
-.cod{
+.cod {
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -282,9 +282,20 @@ footer {
     font-family: monospace;
     font-size: 15px;
     border-radius: 5px;
+    word-wrap: break-word;
 }
-.ancora{
+
+.ancora {
     font-family: monospace;
     font-size: 15px;
     padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    background-color: #5839ee;
+    border-radius: 5px;
+}
+
+.ancora a {
+    color: #fff;
 }
