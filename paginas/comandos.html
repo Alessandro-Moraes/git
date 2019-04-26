@@ -24,47 +24,85 @@
             <h2>Tópicos</h2>
             <article class="article__box">
                 <img src="../images/info.png" alt="logo">
-                <h2>Principais comandos</h2>
-                <p>Aprenda os principais comando do Git...</p>
+                <h2>Comandos e Configurações</h2>
+                <p>Aprenda os principais comandos e a configurar um Git...</p>
             </article>
 
             <article class="article__box-full">
-                <h2>Git init</h2>
-                <p>crie uma nova pasta, abra-a e execute o comando </p>
+                <h2>Iniciando um git</h2>
+                <p>Crie uma nova pasta, abra-a e execute o comando </p>
                 <p class="cod">git init</p>
                 <p>para criar um novo repositório.</p>
             </article>
 
             <article class="article__box-full">
-                <h2>2. Pela fonte</h2>
-                <p>Para instalar o Git, você precisa ter as seguintes bibliotecas que o Git depende: curl, zlib, openssl, expat e libiconv. </p>
-                <p>Por exemplo, se você usa um sistema que tem yum (tal como o Fedora), usa o comando: </p>
-                <p class="cod">yum install curl-devel expat-devel gettext-devel \ openssl-devel zlib-devel</p>
-                <p>Caso seja sistemas baseados no Debian usa o apt-get:</p>
-                <p class="cod">sudo apt-get upadate</p>
-                <p class="cod">apt-get install libcurl4-gnutls-dev libexpat1-dev gettext\libz-dev libssl-dev</p>
-                <p>Quando você tiver todas as dependências necessárias, você pode continuar e baixar o snapshot mais recente a partir do web site do Git: </p>
-                <p class="ancora"><a href="http://git-scm.com/download" target="_blank">http://git-scm.com/download </a></p>
-                <p>Então, compilá-lo e instalá-lo: </p>
-                <p class="cod">tar -zxf git-1.7.2.2.tar.gz </p>
-                <p class="cod">cd git-1.7.2.2 </p>
-                <p class="cod">make prefix=/usr/local all </p>
-                <p class="cod">sudo make prefix=/usr/local install </p>
-                <p>Após a conclusão, você também pode obter o Git via o próprio Git para atualizações: </p>
-                <p class="cod">git clone git://git.kernel.org/pub/scm/git/git.git</p>
-            </article>
-
-            <article class="article__box">
-                <img src="../images/info.png" alt="logo">
-                <h2>Instalaçao no Windows</h2>
-                <p>Descubra como instalar no Windows...</p>
+                <h2>Obtendo um repositório</h2>
+                <p>Crie uma cópia de trabalho em um repositório local executando o comando</p>
+                <p class="cod">git clone [/caminho/para/o/repositório]</p>
+                <p>Quando usar um servidor remoto, seu comando será</p>
+                <p class="cod">git clone usuário@servidor:/caminho/para/o/repositório</p>
             </article>
 
             <article class="article__box-full">
-                <p>Simplesmente baixe o arquivo exe do instalador a partir da página do GitHub e execute-o:</p>
-                <p class="ancora"><a href="http://msysgit.github.com" target="_blank">http://msysgit.github.com</a></p>
-                <p>Após concluir a instalação, você terá tanto uma versão command line (linha de comando, incluindo um cliente SSH que será útil depois) e uma GUI padrão.</p>
+                <h2>Fluxo de trabalho</h2>
+                <p>Seus repositórios locais consistem em três "árvores" mantidas pelo git. a primeira delas é sua Working Directory que contém os arquivos vigentes. a segunda Index que funciona como uma área temporária e finalmente a HEAD que aponta para o último commit (confirmação) que você fez.</p>
             </article>
+
+            <article class="article__box-full">
+                <h2>Adicionar e Confirmar</h2>
+                <p>Você pode propor mudanças (adicioná-las ao Index) usando</p>
+                <p class="cod">git add [nome_arquivo]</p>
+                <p class="cod">git add *</p>
+                <p>Este é o primeiro passo no fluxo de trabalho básico do git. Para realmente confirmar estas mudanças (isto é, fazer um commit), use</p>
+                <p class="cod">git commit -m "comentários das alterações"</p>
+                <p>Agora o arquivo é enviado para o HEAD, mas ainda não para o repositório remoto.</p>
+            </article>
+
+            <article class="article__box-full">
+                <h2>Enviando Alterações</h2>
+                <p>Suas alterações agora estão no HEAD da sua cópia de trabalho local. Para enviar estas alterações ao seu repositório remoto, execute</p>
+                <p class="cod">git push origin master</p>
+                <p>Altere master para qualquer ramo (branch) desejado, enviando suas alterações para ele. </p>
+                <p>Se você não clonou um repositório existente e quer conectar seu repositório a um servidor remoto, você deve adicioná-lo com</p>
+                <p class="cod">git remote add origin [nome_servidor]</p>
+                <p>Agora você é capaz de enviar suas alterações para o servidor remoto selecionado.</p>
+            </article>
+
+            <article class="article__box-full">
+                <h2>Ramificando</h2>
+                <p>Branches ("ramos") são utilizados para desenvolver funcionalidades isoladas umas das outras. O branch master é o branch "padrão" quando você cria um repositório. Use outros branches para desenvolver e mescle-os (merge) ao branch master após a conclusão.</p>
+                <p>Crie um novo branch chamado "funcionalidade_x" e selecione-o usando</p>
+                <p class="cod">git checkout -b funcionalidade_x</p>
+                <p>retorne para o master usando</p>
+                <p class="cod">git checkout master</p>
+                <p>e remova o branch da seguinte forma</p>
+                <p class="cod">git branch -d funcionalidade_x</p>
+                <p>um branch não está disponível a outros a menos que você envie o branch para seu repositório remoto</p>
+                <p class="cod">git push origin [funcionalidade_x]</p>
+            </article>
+
+            <article class="article__box-full">
+                <h2>Atualizar e Mesclar</h2>
+                <p>Para atualizar seu repositório local com a mais nova versão, execute </p>
+                <p class="cod">git pull</p>
+                <p>na sua pasta de trabalho para obter e fazer merge (mesclar) alterações remotas.
+                    para fazer merge de um outro branch ao seu branch ativo (ex. master), use</p>
+                <p class="cod">git merge [branch]</p>
+                <p>em ambos os casos o git tenta fazer o merge das alterações automaticamente. Infelizmente, isto nem sempre é possível e resulta em conflitos. Você é responsável por fazer o merge estes conflitos manualmente editando os arquivos exibidos pelo git. Depois de alterar, você precisa marcá-los como merged com</p>
+                <p class="cod">git add [arquivo]</p>
+                <p>antes de fazer o merge das alterações, você pode também pré-visualizá-as usando</p>
+                <p class="cod">git diff [branch_origem] [branch_destino]</p>
+            </article>
+
+            <article class="article__box-full">
+                <h2>Rotulando</h2>
+                <p>É recomendado criar rótulos para releases de software. Este é um conhecido conceito, que também existe no SVN. Você pode criar um novo rótulo chamado 1.0.0 executando o comando</p>
+                <p class="cod">git tag 1.0.0 1b2e1d63ff</p>
+                <p>o 1b2e1d63ff representa os 10 primeiros caracteres do id de commit que você quer referenciar com seu rótulo. Você pode obter o id de commit com</p>
+                <p class="cod">git log</p>
+                <p>Pode também usar menos caracteres do id de commit, ele somente precisa ser único.</p>
+            </article>
+
         </section>
 
         <aside class="aside__barra">
@@ -72,7 +110,7 @@
             <ul>
                 <li><a href="o-que-e.html">O que é GitHub?</a></li>
                 <li><a href="comandos.html">Comandos Git</a></li>
-                <li><a href="instalacao.html">Instalar no Linux</a></li>
+                <li><a href="instalacao.html">Instalação</a></li>
                 <li><a href="config.html">Configurar o Git</a></li>
                 <li><a href="https://github.com/viniciusbeloti/git">Nosso Git</a></li>
             </ul>
