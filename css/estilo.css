@@ -98,7 +98,8 @@ img {
 
 .section__topicos {
     width: 100%;
-    float: left;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .article__box {
