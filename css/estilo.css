@@ -32,6 +32,10 @@ footer {
     background-color: #f4f5f5;
 }
 
+img {
+    max-width: 100%;
+}
+
 @media screen and (max-width: 905px) {
     footer {
         text-align: center;
@@ -80,14 +84,6 @@ footer {
 @media screen and (max-width: 600px) {
     .section__tudo > h2 {
         font-size: 30px;
-
-    }
-
-}
-
-@media screen and (max-width: 250px) {
-    .section__tudo > h2 {
-        font-size: 15px;
 
     }
 }
@@ -302,6 +298,7 @@ footer {
 section .imageC {
     padding: 10;
     margin: 10px auto 10px auto;
+    text-align: center;
 }
 
 section .imageC img {
