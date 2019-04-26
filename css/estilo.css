@@ -2,6 +2,18 @@
 
 /*ESTILOS GERAIS*/
 
+/*Corrigindo Bug IE*/
+article,
+header,
+nav,
+section,
+footer,
+main {
+    display: block;
+}
+
+/*Corrigindo Bug IE*/
+
 * {
     margin: 0;
     padding: 0;
