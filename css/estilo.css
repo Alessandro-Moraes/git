@@ -298,3 +298,13 @@ footer {
 .ancora a {
     color: #fff;
 }
+
+section .imageC {
+    padding: 10;
+    margin: 10px auto 10px auto;
+}
+
+section .imageC img {
+    border: solid 2px #5839ee;
+    border-radius: 5px;
+}
